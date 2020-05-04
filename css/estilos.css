@@ -1,0 +1,23 @@
+body{ 
+    background:#000000;
+    color: #ffff;
+}
+* {
+    padding: 10px;
+    margin: 10px;
+}
+
+h1{
+    color: 	#A52A2A;
+    font-size: 40px;
+}
+h2{
+    color: 	#FF7F50;
+    font-size: 30px;
+}
+a {
+    color: aquamarine;
+}
+.orange{
+    color: orange;
+}

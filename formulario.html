@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Ejercicio Dom, Bom, Eventos y funciones</title>
+    <script src="java/15-ejercicios-om.js"></script>
+
+    <style>
+        .box{
+            width: 200px;
+            height: 250px;
+            float: left;
+            padding: 20px;
+        }
+        .dashed{
+            border: 3px dashed black;
+            padding: px;
+           
+        }
+      
+    </style>
+
+</head>
+<body>
+    
+    <!-- 
+        1 Tener un formulario
+        2 Boton de enviar el formulario; boton submit
+        3 Mostrar datos por pantalla 
+        4 Validacion del formulario
+    -->
+    <h1>Ejercicio Dom, Bom, Eventos y funciones</h1>
+       <p>
+            <div class="box">
+            <form action="" method="POST" id="formulario" onsubmit="return false">
+             
+                <label for="nombre" >Nombre:</label><br/> 
+                <input type="text" name="nombre" id="nombre"><br/>
+                <span id="error"> </span><br>
+
+                <label for="apellido" >Apellido:</label><br/>
+                <input type="text" name="apellido" id="apellido"><br/>
+                <span id="error1"> </span><br>
+
+                <label for="edad">Edad:</label><br/>
+                <input type="number" name="edad" id="edad"><br/>
+                <span id="error2"> </span><br>
+
+                <input type="submit" value="Enviar" id="submit"><br/>
+            
+            </form>
+            </div>
+        </p>    
+        <p>
+             <div class="box dashed">
+                <h3>Informacion del usuario</h3>
+                <hr>
+                <p id="p_nombre">
+                    Nombre: <span></span>
+                </p>
+            
+                <p id="p_apellido">
+                    Apellido: <span></span>
+                </p>
+            
+                <p id="p_apellido">
+                    Edad: <span></span>
+                </p>
+            </div>
+        </p>    
+   
+ <p>
+        Veamos qué es un texto narrativo, cuál es su definición y las características que lo diferencian de otros,
+        como pueden ser los descriptivos, por ejemplo. Recordemos que un texto, sea del tipo que sea, es un conjunto de 
+        enunciados que, unidos, mantienen una coherencia y una unidad que cobra sentido. <blockquote> Además, la intención de estas
+        redacciones ha de ser comunicativa.</blockquote>
+</p>
+<p> 
+        En el caso que aquí nos ocupa, tras definir el texto, también interesaría saber exactamente en qué consiste el 
+        acto de narrar. <em> Podemos referirnos a él como la intención de contar una historia</em> , ya sea ficticia o verídica.
+        <br/>Ahora que ya conocemos los dos componentes básicos del texto narrativo, vamos a arrancar con esta lección de un 
+        PROFESOR para seguir profundizando sobre la definición y características del texto narrativo.
+</p>
+<p>
+    <i>Dicho lo cual, podemos referirnos a la definición del <a href="#" class="orange" id="enlaces"> texto narrativo </a>como aquel que incluye un relato de acontecimientos 
+        que se desarrollan o se han desarrollado por un periodo de tiempo y espacio estimado.En el mismo se suele incluir la
+        participación de personajes diversos. Además, este texto puede ser tanto real como imaginario.</i> 
+</p>
+
+<p>
+    Veamos qué es un texto narrativo, cuál es su definición y las características que lo diferencian de otros,
+    como pueden ser los descriptivos, por ejemplo. <a href="#" id="enlaces" > Recordemos que un texto</a>, sea del tipo que sea, es un conjunto de 
+    enunciados que, unidos, mantienen una coherencia y una unidad que cobra sentido. Además, la intención de estas
+    redacciones ha de ser comunicativa.
+</p>
+<p> 
+    En el caso que aquí nos ocupa, tras definir el texto, también interesaría saber exactamente en qué consiste el 
+    acto de narrar. Podemos referirnos a él como la intención de contar una historia, ya sea ficticia o verídica.
+    Ahora que ya conocemos los dos <a  href="#" id="enlaces"> componentes básicos del texto narrativo</a>, vamos a arrancar con esta lección de un 
+    PROFESOR para seguir profundizando sobre la definición y características del texto narrativo.
+</p>
+<p>
+    Dicho lo cual, podemos referirnos a la <a href="#" id="enlaces"> definición del texto narrativo</a> como aquel que incluye un relato de acontecimientos 
+    que se desarrollan o se han desarrollado por un periodo de tiempo y espacio estimado. En el mismo se suele incluir la
+    participación de personajes diversos. Además, este texto puede ser tanto real como imaginario.
+</p>
+
+  
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Ejercicio dom, bom y los eventos</title>
+    <script src="java/otro.js"></script>
+
+    <style>
+        .box{
+                height: 250px;
+                width: 200px;
+                float: left;
+                padding: 20px;
+            }
+         .dashed{
+                padding: 5px;
+                border: 2px solid blueviolet;
+                }   
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form action="#" onsubmit="return false" id="formulario">
+            <label for="nombre">Nombre</label><br>
+            <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre" required><br>
+            <span id="error1"></span>
+
+
+            <label for="apellido">Apellido</label><br>
+            <input type="text" name="apellido" id="apellido" placeholder="Escribe tu apellido" required><br>
+            <span id="error2"></span>
+
+            <label for="edad">Edad</label><br>
+            <input type="number" name="edad" id="edad" placeholder="Escribe tu edad" required><br>
+            <span id="error3"></span>
+
+            <input type="submit" value="Enviar" id="submit">
+        </form>
+    </div>
+    <div class="box dashed">
+        <h3>informacion del usuario</h3>
+        <hr>
+        <p id="nombre1">
+            Nombre: <span></span>
+        </p>
+        <p id="apellido1">
+            Apellido: <span></span>
+        </p>
+        <p id="edad1">
+            Edad: <span></span>
+        </p>
+
+    </div>
+    
+</body>
+</html>

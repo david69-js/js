@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <script src="js/01-selectores.js"></script>
+    <style>
+        .zebra{
+            border:4px dashed black ;
+        }
+        .grande{
+            font-size: 50px;
+        }
+        .marger-superior{
+            display: block;
+            margin-top: 50px;
+        }
+        .resaltado{
+            border-bottom: 2px dashed green;
+        }
+    </style>
+
+  <!--
+   <script>
+        $(document).ready(function () {
+            console.log('que triste mi caso');
+        });
+    </script>
+
+  -->  
+
+    <title>jquery</title>
+</head>
+<body>
+
+    <ul>
+        <li><a href="https://translate.google.com/?hl=es" title="google">Ir a google</a></li>
+        <li><a href="https://www.youtube.com/watch?v=hC8CH0Z3L54&list=RDEMbN6Ku1UI2hSKH3M-rz0J4A&index=27" title="musica">Ir a musica</a></li>
+    </ul>
+    <h1>Practando selectores</h1>
+    <p id="rojo" class="sin_borde">cualquier cosa1</p>
+    <p class="zebra">cualquier cosa2</p>
+    <p id="amarillo" class="sin_borde">cualquier cosa3</p>
+    <p class="zebra">cualquier cosa4</p>
+
+    <div id="caja">
+        <ul>
+            <li>soy parte del div</li>
+            <li class="resaltado">Yo tambien lo soy</li>
+        </ul>
+        <span class="resaltado">verga soy un span</span>
+    </div>
+</body>
+</html>

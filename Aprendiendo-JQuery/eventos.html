@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <script src="js/02-eventos.js"></script>
+
+    <style>
+        #caja{
+            border: 3px solid black;
+            height: 150px;
+            width: 159px;
+            background: burlywood;
+            transition: 600ms all;
+        }
+        input{
+            padding: 10px;
+            width: 250px;
+            font-size: 20px;
+        }
+        #datos{
+            border: 4px dashed black; 
+            height: 100px;
+            width: 100px;
+            padding: 30px;
+            margin-top: 10px;
+            display: none;
+
+        }
+        #sigueme{
+            height: 25px;
+            width: 25px;
+            position: absolute;
+            border-radius: 999px;
+            opacity: 0.5;
+            background: teal;
+            display: block;
+        }
+    </style>
+    <title>jquery</title>
+</head>
+<body>
+    <div id="sigueme"></div>
+    <h1>Aprendiendo jQuery vamos de nuevo</h1>
+    <div id="caja">
+        Hola perras soy una caja
+    </div>
+    <br>
+    <input type="text" id="nombre">
+    <div id="datos">
+       
+    </div>
+</body>
+</html>

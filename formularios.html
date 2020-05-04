@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="java/formularios.js"></script>
+    <title>Formularios</title>
+
+
+</head>
+<body>
+ 
+    <div id="todo">
+        <form action="" onsubmit="return false" id="formulario">
+            <label for="nombre">Nombre</label><br>
+            <input type="text" name="nombre" id="nombre" placeholder="Escriba el nombre..." maxlength="30" required><br>
+
+            <label for="apellido">Apellido</label><br>
+            <input type="text" name="apellido" id="apellido" placeholder="Escriba el apellido..." maxlength="30" required><br>
+
+            <label for="usuario">Usuario</label><br>
+            <input type="text" name="usuario" id="usuario" placeholder="Nombre del usuario..." maxlength="25" required><br>
+            
+            <label for="telefono">Telefono</label><br>
+            <input type="number" name="telefono" id="telefono" placeholder="Escriba su numero de telefono..." maxlength="10" required><br>
+
+            <label for="correo">Correo</label><br>
+            <input type="text" name="correo" id="correo" placeholder="Escriba el correo..." required><br>
+        
+            <label for="contra">Bloqueo</label><br>
+            <input type="password" name="contra" id="contra" placeholder="Contrase..." maxlength="15"><br>
+
+           
+            <input type="submit" value="Enviar" id="submit"><br>
+        </form>
+
+    </div>
+      
+</body>
+</html>
