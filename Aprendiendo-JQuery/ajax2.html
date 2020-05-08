@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Ejercios de Ajax</title>
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <script src="js/06-ajaxejer.js"></script>
+    <style>
+        #caja{
+            border:4px solid black;
+            margin-top: 30px;
+            padding: 30px;
+            text-align: center;
+            line-height: normal;
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            width: 250px;
+            height: 30px;
+            background: chocolate;
+            display: none;
+            
+        }
+        #estado{
+            border:4px solid black;
+            margin-top: 30px;
+            padding: 30px;
+            text-align: center;
+            line-height: normal;
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            width: 150px;
+            height: 15px;
+            background: chocolate;
+        }
+    </style>
+</head>
+<body>
+    <h1>Peticiones de Ajax</h1>
+    <h2>Url de la pagina</h2><p>file:///C:/Users/salva/Desktop/nada/Aprendiendo-JQuery/ajax2.html</p>
+
+    <form action="https://reqres.in/api/users?page=2" id="formulario" method="POST">
+        <input type="text" name="url"><button id="enviar">Enviar</button>
+    </form>
+    <br>
+    <hr>
+
+    <button id="mostrar">Mostrar Contenidos</button>
+        <div id="caja">  
+        <ul id="menu">
+            
+        </ul> 
+    </div>
+    
+    <div id="estado">
+        No inicializada
+    </div>
+
+    <br>
+
+</body>
+</html>
