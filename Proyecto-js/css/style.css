@@ -1,0 +1,237 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.clear{
+   float: none;
+   clear: both;
+}
+#global{
+    width: 60%;
+    margin-top:30px;
+    margin: 0px auto;
+    padding: 25px;
+    background: white;
+    box-shadow: 0px 0px 2px purple;
+
+}
+#logo{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 28px;
+    letter-spacing: 4px;
+    color: white;
+    text-align: center;
+    width: 385px;
+    height: 80px;
+    margin-bottom: 20px;
+    line-height: 75px;
+    text-transform: uppercase;
+}
+#menu{
+    font-family:Arial, Helvetica, sans-serif;
+    width: 100%;
+    margin-bottom: 20px;
+    background: #333333;
+}
+#menu ul {
+    line-height: 40px;
+    list-style: none;
+}
+#menu ul li{
+    display: inline-block;
+    transition: all 400ms;
+    height: 46px;
+}
+#menu a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#posts{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    float: left;
+    width: 60%;
+}
+.post{
+    padding: 10px;
+}
+.post h3{
+    font-size: 30px;
+    color:#333333;
+}
+.post.date{
+    display: block;
+    color: gray;
+    margin-top: 5px;
+}
+.post p{
+    margin-bottom: 30px;
+    margin-top: 10px;
+    line-height: 20px;
+    text-align: justify;
+}
+
+#more{
+    display: block;
+    width: 60px;
+    padding: 10px;
+    color: honeydew;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+#sidebar{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 30%;    
+    float: right;
+}
+#sidebar h4{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 10px;
+    color: #333333;
+    background: url('../img/lines.png')repeat-x;
+}
+#sidebar h4 span{
+    padding: 5px;
+    background-color: floralwhite;
+}
+#sidebar img{
+    width: 100%;
+}
+#sidebar p{
+    text-align: justify;
+    font-size: 15px;
+}
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form input[type="number"],
+form input[type="sumbit"]
+select{
+    padding: 5px;
+    border-radius: 2px ;
+    border: 1px solid rgb(153, 153, 165);
+    width: 80%;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+form input[type="submit"]{
+    padding: 10px;
+    border: 1px solid #CCC;
+    cursor: pointer;
+    background-color: rgb(230, 220, 220);
+}
+footer{
+    font-family: 'Times New Roman', Times, serif;
+    color: floralwhite;
+    height: 47px;
+    margin: 0px auto;
+    width: 60%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 50px;
+    line-height: 47px;
+    background: rgba(51,51,51, 0.70);
+}
+.box-wrapper, .bx-viewport{
+    height: 250px !important;
+} 
+
+#content{
+    display: inline-block;
+}
+#botones{
+    background: rgba(51,51,51,0.7);
+    top: 100px;
+    position: fixed;
+    width:50px;
+    height: 100px;
+}
+#to-green,
+#to-red,
+#to-blue{
+    width: 25px;
+    height: 25px;
+    display: block;
+    border: 1px solid white;
+    margin: 0px auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+#to-green{
+    background: darkgreen;
+}
+#to-red{
+    background: red;
+}
+#to-blue{
+    background: blue;
+}
+.subir{
+    color: cornsilk;
+    float: right;
+    text-decoration: none;
+}
+#logout{
+    margin-top: 50px;
+    float: left;
+    text-decoration: none;
+}
+#box{
+    width: 60%;
+    float: left;
+    margin-top: 48px;
+}
+.ui-accordion-content{
+    height: 20px;
+}
+.ui-accordion-header {
+    background: red;
+}
+#reloj{
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200px;
+    border: 2px solid darkred;
+    background: brown;
+    text-align: center;
+    color:black;
+    width: 50%;
+    padding: 30px;
+    margin: 0px auto;
+}
+#relo{
+    margin: 0px auto;
+    color: brown;
+    margin: 0px auto;
+    border: 2px solid darkred;
+    text-align: center;
+    margin-bottom: 5%;
+}
+#formulario {
+    width: 60%;
+    margin-top: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#formulario label{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+.help-block{
+    float: right;
+    padding: 10px;
+    background: indianred;
+    width: 92%;
+    font-size: 9px;
+    margin-top: inherit;
+    color: white;
+}

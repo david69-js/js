@@ -1,0 +1,16 @@
+body{
+    background: url('../img/rojo.jpg'); /*Para cargar la imagen*/
+    background-attachment: fixed;/*Para cargar la imagen en toda la pagina y no quede nada en blanco*/
+}
+
+#logo{
+    background: red;
+}
+
+#menu ul li:hover{
+    background: red;
+}
+
+#more{
+    background:red;
+}

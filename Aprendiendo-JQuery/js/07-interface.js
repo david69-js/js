@@ -27,6 +27,20 @@ $(document).ready(function () {
        function(){
             $('.efecto').toggle('drop', 1000); // drop, slide, fade, blind, fold, puff
        })
+       // Realizar un cuandro de comentario en el href
+       $(document).tooltip();
+
+       // Popup realiza una ventana emergente 
+       $('#lanzar').click(function(){
+        $("#dialogo").dialog();
+       })
+
+    // Calendario
+    $('#calendario').datepicker();
+
+    // tabs 
+    $("#pestana").tabs();
+
 
 
 });
