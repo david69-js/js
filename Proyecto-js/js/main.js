@@ -1,13 +1,44 @@
 $(document).ready(function () {
     
     // Slider 
-    if(window.location.href.indexOf('index') >-1){
-    $('.bxslider').bxSlider({
-        mode: 'fade',
-        slideWidth: 1200,
-        pager:false
-      });
-    }
+ 
+
+        // Recorrer las imagenes 
+        if(window.location.href.indexOf('index') >-1){
+    
+            var imagenes = [
+                {
+                    img: 'img/cielo.jpg',
+                    title1:'cielo'
+                },
+                {
+                    img: 'img/hojas.jpg',
+                    title1:'hojas'
+                },
+                {
+                    img: 'img/rojo.jpg',
+                    title1:'rojo'
+                }
+        ];
+    
+            imagenes.forEach((elemento, index) => {
+    
+                var slider1 =`
+                <div><img src="${elemento.img}" title="${elemento.title1}"></div>
+                `;
+                $('.bxslider').append(slider1)
+            });
+
+        }
+        if(window.location.href.indexOf('index') >-1){
+            $('.bxslider').bxSlider({
+                mode: 'fade',
+                slideWidth: 1200,
+                pager:false
+              });
+        }
+
+
       // Posts
       if(window.location.href.indexOf('index') >-1){
       var posts = [
@@ -42,6 +73,7 @@ $(document).ready(function () {
                 content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt sem nec congue gravida. Vestibulum nec nunc arcu. Cras eget ipsum nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce consectetur, urna nec aliquam mattis, nisi dolor pulvinar erossed ultricies velit risus nec dui. Aenean quis elit eget ex ullamcorper sodales ut vitae nibh. Suspendisse urna diam, facilisis nec consectetur ut, commodo quis turpis. Maecenas lacinia mollis lacinia. Integer egestas tristique eros nec sagittis." 
                  }
       ]
+
         posts.forEach((element) => {
           var publicaciones = `
           <article class="post" >
@@ -56,7 +88,7 @@ $(document).ready(function () {
         $("#posts").append(publicaciones);
       });
     }
-            
+
       // Cambiar de tema de forma dinamica
       var theme = $("#theme");
       $('#to-green').click(function(){
