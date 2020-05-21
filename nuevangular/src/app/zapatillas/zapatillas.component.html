@@ -1,7 +1,7 @@
 <h2>{{ titulo }}</h2>
 <h3>{{ listado }}</h3>
+
 <ol>
-    <li>Mercurial</li>
-    <li>Magista</li>
-    <li>Predator</li>
+         <li *ngFor="let deportiva of zapatillas">{{ deportiva.nombre }} - <strong>Q.{{ deportiva.precio }}</strong></li>
+ 
 </ol>

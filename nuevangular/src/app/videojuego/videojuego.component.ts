@@ -23,7 +23,7 @@ export class VideojuegoComponent implements OnInit, DoCheck, OnDestroy{ // Sirve
     
    
     constructor(){
-        this.titulo = "Titutulo de los componentes";
+        this.titulo = "Titulo de los componentes";
         this.listado = "Listado de componentes";
         console.log('Ya cargo el compoenente de: VideojuegoComponent'); // No podemos realizar nada fuerar del contructor
     }
@@ -40,4 +40,5 @@ export class VideojuegoComponent implements OnInit, DoCheck, OnDestroy{ // Sirve
         this.titulo= "Este es el nuevo titulo";
     }
 
+    
 };
