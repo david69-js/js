@@ -1,6 +1,36 @@
+<div [ngStyle]= "{
+        'background': config.fondo,
+        'padding':'20px',
+        'border': '20px solid black',
+        'border-color': config.color
+      }">
 <h1>
   {{title}}
 </h1>
-<videojuego></videojuego>
-<videojuego></videojuego>
-<videojuego></videojuego>
+<h3>{{ descripcion }}</h3>
+
+<!--De esta forma podemos cambiar de ruta de manera dinamica-->
+
+<hr>
+
+<!--
+<button (click)="ocultar(flase)" *ngIf="mostrar">Mostrar</button>
+<button (click)="ocultar(true)" *ngIf="!mostrar">Ocultar</button>
+
+<videojuego *ngIf="!mostrar"></videojuego>
+<zapatillas></zapatillas>
+-->
+
+<nav>
+  <a [routerLink]="['home']"  [routerLinkActive]="['active']">Home</a>
+  &nbsp;
+  <a [routerLink]="['zapatillas']" [routerLinkActive]="['active']">Zapatillas</a>
+  &nbsp;
+  <a [routerLink]="['videojuego']"  [routerLinkActive]="['active']">Video Juegos</a>
+  &nbsp;
+  <a [routerLink]="['cursos']"  [routerLinkActive]="['active']">Cursos</a>
+</nav>
+<router-outlet></router-outlet>
+
+
+</div>

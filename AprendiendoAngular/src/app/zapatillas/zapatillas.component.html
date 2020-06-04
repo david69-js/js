@@ -1,0 +1,65 @@
+<h3>Agrega tu marca con el data-bindin</h3>
+<p>
+    <input type="text" [(ngModel)]='agrega' (keyup.enter)="keyup()">
+    <button (click)="getMarca()">Agregar</button>
+    <button (click)='mostrarMarca()'>Mostrar Marca</button>
+</p>
+<p>{{ agrega }}</p>
+<h2>Estas son las marcas que tenemos disponibles</h2>
+
+<ul>
+    <li *ngFor= "let marca of marcas; let  indice = index">{{ indice+" "+ marca }} 
+        <button (click)='deleteMarca(indice)'>Eliminar Marca</button>
+    </li>
+</ul>
+
+
+<h2>{{ titulo }}</h2>
+<ul>
+    <li *ngFor= "let depor of zapatillas"> 
+        
+        <span [ngStyle]="{ 
+            'text-decoration': depor.stock != true ? 'line-through' : 'none' }">
+
+        {{depor.nombre}} <strong [class.altoPrecio]="depor.precio >= 300"
+            [ngClass]="{
+                'subrayado': 'depor.precio >= 300',
+                'fondoRojo': 'depor.marxa == Nike' 
+            }"
+                >Q-{{depor.precio}}</strong>
+        </span>
+
+
+                <span *ngIf="depor.precio < 300"  
+                [style.background] ="depor.precio < 300 ? 'green' : 'transparent' " 
+                [style.color] = "depor.precio < 300 ? 'white' : 'black' ">En oferta!</span></li>
+</ul>
+<p>El color de  la mayoria de de nuestras zapatillas es :</p>
+<p>
+    <input type="text" [(ngModel)]= "color">
+</p>
+
+
+<strong>Estos son los colores del catalogo</strong>
+
+<ul>
+    <li *ngFor="let recorre of colores_disponibles">{{recorre}}</li>
+</ul>   
+
+<ul [ngSwitch]= 'color'>
+    <li *ngSwitchCase="'amarillo'">
+        El color dominate es <span [ngStyle]="{'background': 'yellow'}">amarillo</span></li>
+
+    <li *ngSwitchCase="'azul'">
+        El color dominate es <span [ngStyle]="{'background': 'blue'}">Azul</span></li>
+    
+    <li *ngSwitchCase="'negro'">
+        El color dominate es <span [ngStyle]="{'background': 'black', 'color': 'white'}">Negro</span></li>
+    
+    <li *ngSwitchCase="'verde'">
+        El color dominate es <span [ngStyle]="{'background': 'green'}">Verde</span></li>
+
+    <li *ngSwitchCase="'rosa'">
+        El color dominate es <span [ngStyle]="{'background': 'pink'}">Rosa</span></li>
+
+</ul>
