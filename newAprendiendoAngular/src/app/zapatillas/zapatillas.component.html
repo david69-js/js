@@ -1,0 +1,59 @@
+
+<h3>{{titulo}}</h3>
+
+<p>
+    <input type="text" [(ngModel)]='mi_marca' (keyup.enter)="alerta()">
+    <button (click)="addMarca()">Agrega tu marca</button> 
+</p>
+<p>{{mi_marca}}</p>
+<ul>
+    <li *ngFor="let marcas of marca; let indice = index ">{{ indice+" "+marcas }}
+        <button (click)="deleteMarca(indice)">Eliminar marcar</button>
+    </li>
+    
+</ul>
+
+<h3>Zapatillas</h3>
+<ul>
+    <li *ngFor="let deportivas of zapatillas">
+        <span [ngStyle]="{ 
+            'text-decoration': deportivas.stock != true ? 'line-through' : 'none' }">{{deportivas.nombre}}
+        
+            <strong><span *ngIf='deportivas.precio > 100'
+                [ngClass]="['altoPrecio']"
+                >Q.{{deportivas.precio}} </span></strong>
+    </span>
+
+        <span *ngIf="deportivas.precio <= 100 "
+
+        [style.background] ="deportivas.precio <= 100 ? 'green' : 'transparent' " 
+        [style.color] = "deportivas.precio <= 100 ? 'white' : 'black'" > Q.{{deportivas.precio}} En Oferta!</span>
+        
+    </li>
+</ul>
+
+<h4>Colores del catalogo</h4>
+<ul>
+    <li *ngFor="let color of zapatillas">{{color.color}}</li>
+</ul>
+<p>
+    <input type="text" [(ngModel)]='colors'>
+</p>
+
+<ul [ngSwitch]="colors">
+    <li *ngSwitchCase ="'amarillo'">El color predminante es <strong 
+        [ngStyle]="{'background': 'yellow' }">Amarillo</strong></li>
+
+    <li *ngSwitchCase ="'azul'">El color predminante es <strong 
+        [ngStyle]="{'background': 'blue' }">Azul</strong></li>
+
+    <li *ngSwitchCase ="'rosa'">El color predminante es <strong 
+        [ngStyle]="{'background': 'pink' }">Rosa</strong></li>
+
+    <li *ngSwitchCase ="'negro'">El color predminante es <strong 
+        [ngStyle]="{'background': 'black', 'color': 'white' }">Negro</strong></li>
+
+    <li *ngSwitchCase ="'verde'">El color predminante es <strong 
+        [ngStyle]="{'background': 'green' }">Verde</strong></li>
+</ul>
+

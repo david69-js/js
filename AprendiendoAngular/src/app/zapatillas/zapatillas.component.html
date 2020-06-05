@@ -46,7 +46,7 @@
     <li *ngFor="let recorre of colores_disponibles">{{recorre}}</li>
 </ul>   
 
-<ul [ngSwitch]= 'color'>
+<ul [ngSwitch]= "color">
     <li *ngSwitchCase="'amarillo'">
         El color dominate es <span [ngStyle]="{'background': 'yellow'}">amarillo</span></li>
 

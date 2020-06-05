@@ -1,0 +1,17 @@
+<button (click)="redirige()">Redirigir</button>
+
+<h1 *ngIf="nombre">Bienvenido {{nombre}}</h1>
+<h2 *ngIf="seguidores">Usted tiene esta cantidad de seguidores {{seguidores}}</h2>
+
+<div *ngIf="identificado; then siIdentificado else noIdentificado"></div>
+
+<ng-template #siIdentificado>
+    <p>Usted esta identificado en la aplicacion</p>
+    <button (click)="registro(false)">Borrar registro</button>
+</ng-template>
+
+
+<ng-template #noIdentificado>
+    <p>Usted no se encuentra registrado, presione para registrase</p>
+    <button (click)="registro(true)">Registarse</button>
+</ng-template>

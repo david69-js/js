@@ -1,0 +1,21 @@
+<h1>Formulario de contacto</h1>
+
+<form #formContacto= 'ngForm' (ngSubmit)="onSubmit()">
+    <label for="name">Nombre</label><br>
+    <input type="text" name="nombre" placeholder="Escribe tu nombre" #nombre='ngModel' [(ngModel)]='usuario.nombre'><br>
+    
+    <label for="apellido">Apellido</label><br>
+    <input type="text" name="apellido" placeholder="Escribe tu apellido" #apellidos='ngModel' [(ngModel)]='usuario.apellidos'><br>
+    
+    
+    <label for="email">Correo</label><br>
+    <input type="email" name="email" placeholder="Escribe tu email" #email='ngModel' [(ngModel)]='usuario.email'><br>
+    
+    
+    <label for="mensaje">Mensaje</label><br>
+    <textarea name="mensaje"  #mensaje='ngModel' [(ngModel)]='usuario.mensaje'></textarea><br>
+    
+    <input type="submit" value="Enviar"><br>
+
+
+</form>

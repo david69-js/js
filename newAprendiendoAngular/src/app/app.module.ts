@@ -1,17 +1,26 @@
+// Estos de agualar
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { routing, appRoutingProviders} from './app.routing';
-import { HttpClientModule} from "@angular/common/http"
+import {FormsModule} from '@angular/forms'
+import { Routing, appRoutesProviders} from './app.routing'; //servidores y componentes
+import { HttpClientModule} from '@angular/common/http';
 
-
+//Estos son los modulos
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VideojuegoComponent } from './videojuego/videojuego.component';
 import { ZapatillasComponent } from './zapatillas/zapatillas.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { HomeComponent } from './home/home.component';
-import { CommonModule } from '@angular/common';
+import { ExternoComponent } from './externo/externo.component';
+
+
+import { CalculadoraPipes } from './pipes/calculadora.pipe';
+import { ContactoComponent } from './contacto/contacto.component';
+
+
+
+
 
 
 
@@ -19,21 +28,24 @@ import { CommonModule } from '@angular/common';
   declarations: [
     AppComponent,
     VideojuegoComponent,
-    ZapatillasComponent,
     CursosComponent,
     HomeComponent,
-
+    ZapatillasComponent,
+    ExternoComponent,
+    CalculadoraPipes,
+    ContactoComponent
   ],
   imports: [
-    CommonModule,
     BrowserModule,
+    AppRoutingModule,
     FormsModule,
-    HttpModule,
-    routing,
-    HttpClientModule
+    Routing,
+    HttpClientModule,
+
   ],
   providers: [
-    appRoutingProviders
+    appRoutesProviders,
+
   ],
   bootstrap: [AppComponent]
 })
