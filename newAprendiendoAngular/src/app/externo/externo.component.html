@@ -1,3 +1,29 @@
+<h3>Creando Formulario con el metodo post</h3>
+<form #FormExterno="ngForm" (ngSubmit)='onSubmit(FormExterno)'>
+
+    <p>
+        <label for="name">Nombre</label>
+        <input type="text" #name='ngModel' name="name" [(ngModel)]='userpost.name' required >
+        <span *ngIf='name.touched && !name.valid' >El nombre es obligatorio</span>
+
+    </p>
+
+    <p>
+        <label for="job">Trabajo</label>
+        <input type="text" #job='ngModel' name="job" [(ngModel)]='userpost.job' required>
+        <span *ngIf="job.touched && !name.valid">El trabajo no es valido</span>
+    </p>
+
+    <input type="submit" value="Enviar" [disabled]='!FormExterno.form.valid' >
+    
+</form>
+<hr>
+<div *ngIf="mostra">
+    <h2>El usuario se ha guardado correctamente</h2>
+    <h3>Bievenido: {{mostra.name}}</h3>
+    <h4>Trabajas en: {{mostra.job}}</h4>
+</div>
+
 <h2>{{fecha | date:'fullDate' | uppercase}}</h2><br>
 <h2>{{fecha | date:'dd/MM/yy' }}</h2>
 
@@ -13,3 +39,6 @@
     <h2>{{user.first_name}}  {{user.last_name}}</h2>
     <img src="{{user.avatar}}" alt="Prueba" width="200px">
 </div>
+
+<hr>
+

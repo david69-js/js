@@ -24,6 +24,7 @@ import { ContactoComponent } from './contacto/contacto.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,8 @@ import { ContactoComponent } from './contacto/contacto.component';
     ZapatillasComponent,
     ExternoComponent,
     CalculadoraPipes,
-    ContactoComponent
+    ContactoComponent,
+
   ],
   imports: [
     BrowserModule,

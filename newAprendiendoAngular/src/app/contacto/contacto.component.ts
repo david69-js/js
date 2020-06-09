@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ContactoUsuario } from '../models/contacto.usuario';
+import { UsuarioContaco } from '../models/contacto.usuario';
 
 @Component({
   selector: 'app-contacto',
@@ -7,20 +7,20 @@ import { ContactoUsuario } from '../models/contacto.usuario';
   styleUrls: ['./contacto.component.scss']
 })
 export class ContactoComponent implements OnInit {
+  public usuario : UsuarioContaco
 
-  public usuario: ContactoUsuario
-
-  constructor() { 
-    this.usuario = new ContactoUsuario('','','','')
+  constructor() 
+  {
+    this.usuario = new UsuarioContaco('','','','')
   }
 
   ngOnInit(): void {
-
+  
   }
 
   onSubmit(){
-    console.log('Evento submit lanzado')
-    console.log(this.usuario)
+    console.log('lanzado');
+    console.log(this.usuario);
   }
 
 }

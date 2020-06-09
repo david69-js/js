@@ -65,7 +65,7 @@ export class ZapatillasComponent implements OnInit {
   }
 
   alerta(){
-    alert( this.mi_marca)
+    alert(this.mi_marca)
   }
 
 

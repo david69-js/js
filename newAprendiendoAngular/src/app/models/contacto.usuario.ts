@@ -1,8 +1,8 @@
-export class ContactoUsuario{
+export class UsuarioContaco{
     constructor(
-        public nombre: string,
-        public apellidos: string,
-        public email:string,
-        public mensaje:string,
-    ){} 
+        public nombre:string,
+        public apellido:string,
+        public email: string,
+        public mensaje: string
+    ){}
 }

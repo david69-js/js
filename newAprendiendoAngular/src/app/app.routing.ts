@@ -18,10 +18,12 @@ const appRoutes: Routes =[ // Todas son para poder utilarlas para realizar una v
     { path:'cursos', component: CursosComponent},
 
     { path:'cursos/:nombre/:seguidores', component: CursosComponent},// Esta la podemos utilizar para recoger parametros por la url
-
+    
     {path:'externo', component: ExternoComponent},
     { path:'videojuego', component: VideojuegoComponent},
     { path:'zapatillas', component: ZapatillasComponent},
+
+
     {path:'contacto', component: ContactoComponent},
     { path:"**", component:HomeComponent} //Estas es una de las mas importantes
 ];
