@@ -4,6 +4,10 @@ import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms'
 import { Routing, appRoutesProviders} from './app.routing'; //servidores y componentes
 import { HttpClientModule} from '@angular/common/http';
+import { DataService } from './data.service';
+
+
+
 
 //Estos son los modulos
 import { AppRoutingModule } from './app-routing.module';
@@ -13,15 +17,11 @@ import { ZapatillasComponent } from './zapatillas/zapatillas.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { HomeComponent } from './home/home.component';
 import { ExternoComponent } from './externo/externo.component';
+import { FormComponent } from './formu/formula.component';
 
 
 import { CalculadoraPipes } from './pipes/calculadora.pipe';
 import { ContactoComponent } from './contacto/contacto.component';
-
-
-
-
-
 
 
 
@@ -35,6 +35,7 @@ import { ContactoComponent } from './contacto/contacto.component';
     ExternoComponent,
     CalculadoraPipes,
     ContactoComponent,
+    FormComponent,
 
   ],
   imports: [
@@ -49,6 +50,9 @@ import { ContactoComponent } from './contacto/contacto.component';
     appRoutesProviders,
 
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent,
+    DataService,
+  ]
 })
 export class AppModule { }

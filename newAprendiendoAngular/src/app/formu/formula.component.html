@@ -1,0 +1,64 @@
+<h1>This is my new form</h1>
+
+<div>
+    <form #NewForm="ngForm" >
+        
+        <label for="name">Name</label><br>
+        <input type="text" name="name" #Name='ngModel' [(ngModel)]='data.name'  required>
+        <span *ngIf="!Name.valid && Name.touched"
+        [style.color] =" !Name.valid && Name.touched ? 'red' : 'transparent' "
+        >
+        This is camp required</span> 
+        <br>
+
+        <label for="lastname">Las name</label><br>
+       <input type="text" name="last_name" #Last="ngModel" [(ngModel)]="data.last_name" required>
+       <span *ngIf="!Last.valid && Last.touched"
+       [style.color]="!Last.valid && Last.touched ? 'red' : 'transparent'"  
+       >This is camp required</span><br>
+
+        <label for="email">Email</label><br>
+        <input type="email" name="email" #Email='ngModel' [(ngModel)]='data.email' required>
+        <span *ngIf="!Email.valid && Email.touched"
+        [style.color]="!Email.valid && Email.touched ? 'red' : 'transparent'"
+        >This is camp required</span><br>
+
+        <label for="Age">Age</label><br>
+        <input type="number" name="age" #Age='ngModel' [(ngModel)]='data.age' required>
+        <span *ngIf="!Age.valid && Age.touched"
+        [style.color]="!Age.valid && Age.touched ? 'red' : 'transparent'"
+        >This is camp required</span><br>
+
+        <label for="name">Message</label><br>
+        <textarea name="message" #Message="ngModel" [(ngModel)]='data.message' placeholder="The message isn't required" ></textarea><br>
+
+        <input type="submit" value="Sent" [disabled]='!NewForm.form.valid' (click)="addMarca(NewForm)">
+    </form>
+
+
+<div id="caja" *ngFor="let deportivas of data">
+        <span>{{deportivas.name}} -- </span>
+        <strong><span>   {{deportivas.age}}</span></strong><hr>
+</div> 
+
+
+    <form  #Formu="ngForm" (submit)="getUser(user)">
+        <p>
+            <input type="text" #user required>
+            <span *ngIf="!user.valid && user.touched">This is camp required</span>
+        </p>
+            <input type="submit" value="Sent" [disabled]="!Formu.form.valid"  >
+    </form>
+
+    <ul>
+        <li *ngFor="let users of name">{{users}}</li>
+    </ul>
+
+    <div *ngFor="let all of date1">
+        <h3>{{all.title}}--{{all.userId}}</h3>
+        <p>{{all.body}}</p>
+    </div>
+        
+
+
+

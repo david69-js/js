@@ -6,3 +6,11 @@
 .active{
     border: 5px solid yellow;
 }
+#caja{
+    border-color: black;
+    background-color: brown;
+    color:white ;
+    height: 5%;
+    width:15%;
+    font-size: 100%;
+}

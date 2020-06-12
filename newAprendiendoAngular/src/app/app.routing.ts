@@ -10,6 +10,7 @@ import { VideojuegoComponent } from "./videojuego/videojuego.component";
 import { ZapatillasComponent } from './zapatillas/zapatillas.component';
 import { ExternoComponent} from './externo/externo.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { FormComponent } from './formu/formula.component';
 
 // La array de componentes
 
@@ -22,6 +23,7 @@ const appRoutes: Routes =[ // Todas son para poder utilarlas para realizar una v
     {path:'externo', component: ExternoComponent},
     { path:'videojuego', component: VideojuegoComponent},
     { path:'zapatillas', component: ZapatillasComponent},
+    {path: 'formulario', component:FormComponent},
 
 
     {path:'contacto', component: ContactoComponent},

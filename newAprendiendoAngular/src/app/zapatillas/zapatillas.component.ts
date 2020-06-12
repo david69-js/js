@@ -7,6 +7,7 @@ import { ZapatillaService } from '../service/zapatilla.service'; // Importamos e
   selector: 'zapatillas',
   templateUrl: './zapatillas.component.html',
   providers:[ ZapatillaService] // Para poder cargar nuestro servicio externo
+  
 })
 
 export class ZapatillasComponent implements OnInit {
