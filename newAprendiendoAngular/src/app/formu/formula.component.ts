@@ -39,11 +39,8 @@ export class FormComponent implements OnInit{
         )
 }
 
-
-
     onSubmit(from){
         from.reset();
-        
     }
     getUser(user){
         this.name.push(user.value)

@@ -1,10 +1,10 @@
 <h1>This is my new form</h1>
 
 <div>
-    <form #NewForm="ngForm" >
+    <form #NewForm="ngForm" (ngSubmit)="onSubmit(NewForm)">
         
         <label for="name">Name</label><br>
-        <input type="text" name="name" #Name='ngModel' [(ngModel)]='data.name'  required>
+        <input type="text" name="name" #Name='ngModel' [(ngModel)]='data.name'  required pattern="[a-zA-Z]+">
         <span *ngIf="!Name.valid && Name.touched"
         [style.color] =" !Name.valid && Name.touched ? 'red' : 'transparent' "
         >
@@ -12,7 +12,7 @@
         <br>
 
         <label for="lastname">Las name</label><br>
-       <input type="text" name="last_name" #Last="ngModel" [(ngModel)]="data.last_name" required>
+       <input type="text" name="last_name" #Last="ngModel" [(ngModel)]="data.last_name" required pattern="[a-zA-Z]+">
        <span *ngIf="!Last.valid && Last.touched"
        [style.color]="!Last.valid && Last.touched ? 'red' : 'transparent'"  
        >This is camp required</span><br>
@@ -37,7 +37,7 @@
 
 
 <div id="caja" *ngFor="let deportivas of data">
-        <span>{{deportivas.name}} -- </span>
+        <span>{{deportivas.name  }} -- </span>
         <strong><span>   {{deportivas.age}}</span></strong><hr>
 </div> 
 

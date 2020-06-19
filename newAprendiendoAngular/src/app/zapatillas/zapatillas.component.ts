@@ -30,13 +30,15 @@ export class ZapatillasComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.zapatillas = this._zapatillaService.getZapatillas();
+    this.zapa();
     alert(this._zapatillaService.getTexto())
     this.getMarca();
     this.getColores();
 
   }
-
+  zapa(){
+   return this.zapatillas = this._zapatillaService.getZapatillas();
+  }
   getMarca(){
     this.zapatillas.forEach((zapatilla, index) => {
 
