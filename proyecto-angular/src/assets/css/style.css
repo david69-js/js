@@ -1,0 +1,193 @@
+
+/*Importamos los custom*/
+@font-face{
+    font-family: 'yanone';
+    src: url('fonts/yanone.ttf');
+}
+
+@font-face{
+    font-family: 'finger';
+    src: url('fonts/finger.ttf');
+}
+/*Estilos generales, para tener un control absoluto de nuestro contenedor*/
+*{
+    padding: 1px;
+    margin: -7px;
+}
+
+body{
+    font-family: "yanone", Arial, Helvetica, sans-serif;/*Tipo de letra personalizado*/
+    font-size: 20px;
+    background: url('../img/pattern.png'); /*Para el fondo*/
+   background-attachment: fixed; /*Para que no se mueva cuado de haga el scroll*/
+}
+.clearflix{
+    float: none;
+    clear: both;
+}
+
+/*El header/ cabecera*/
+header{
+    display: block; /*para que se actue como bloque*/
+    width: 104%; /*para que ocupe el 100%  de la pagina */
+    height: 90px;
+    background: rgba(158, 20, 20, 0.9);
+    position: fixed; /*para que cuando se  haga scroll bajw tambien la barra de navegacion*/
+    text-transform: uppercase;
+}
+
+header ul{
+    display: block;/*Para que actue como un bloque*/
+    width: 50%;
+    height: inherit;
+    margin: 0px auto;
+}
+
+header ul li {
+    display: inline-block; /*Para que actuen como bloque y se pongo uno al lado del otro*/
+    margin: auto;
+    text-align: center;
+    line-height: 94px;
+    margin-top: -4px;
+}
+
+header a{
+    display: block;
+    padding-left: 25px;
+    padding-right: 25px;
+    height: inherit;
+    color: white;
+    transition: 500ms;
+}
+header a:hover{
+    background: rgba(0, 0, 0, 0.5);
+}
+/*Logolotipo*/
+
+.logo{
+    font-family: 'finger', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 32px;
+}
+.logo a {
+    transition: color 500ms, transform 500ms; /*Las animaciones que se realizaran*/
+}
+header .logo a:hover{
+    background: transparent;
+    color: black;/*cambia de color*/
+    transform: scale(1.75,1.75);/*Es el tamanio al que se agreanda cuando se pase por encima*/
+}
+.active{
+    background: rgba(23,23,23, 0.8);
+}
+/*Contenedor principal*/
+#content{
+    min-height: 550px; /*Para hacer el contenedor mas grande*/
+    width: 70%; /*El ancho que tendre nuestro contenedor*/
+    margin:auto;
+    border-left: solid #b7b7bb;
+    box-shadow: 0px 0px 20px black;
+    background:rgba(225,225, 225,0.8);
+    padding-top: 100px;
+}
+
+/*Footer*/
+
+footer{
+    text-align: center;
+    padding-top: 20px;
+}
+
+/*About*/
+
+#about{
+    text-align: center;
+}
+#title{
+    font-size: 40px;
+    font-family: 'finger', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
+}
+.hr{
+    width: 70%;
+    margin-left:15%;
+}
+#sub{
+    font-size: 25px;
+    color: rgb(121, 116, 116);
+}
+#email{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 2%;
+}
+/*Articulo*/
+article{
+    width: 80%;
+    text-align: justify;
+    padding-left:10%;
+    padding-right:10%;
+}
+
+article h2 {
+    text-align: left;
+    margin-top: 8%;
+    
+}
+article hr{
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+/*Estilos del Formualrio*/
+h1{
+    text-align: center;
+    font-size: 40px;
+    border-bottom: 2px solid seagreen;
+    margin-left: 20%;
+    width: 40%;
+    background:grey;
+    margin-bottom: 10%;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+#container{
+    padding-left: 11%;
+}
+form label{
+    display: block;
+    width: 100%;
+    font-size:25px;
+}
+form input[type='text'],
+form input[type='file'],
+form textarea{
+    width: 40%;
+    height: 40px;
+    margin-bottom: 10px;
+    margin-top: 1%;
+}
+form input[type='number']{
+    height: 30px;
+    width: 5%;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 1%;
+}
+form input[type="submit"]{
+    display: block;
+    background-color: tomato;
+    height: 30px;
+    width: 40xp;
+    font-size: 20px;
+
+}
+
+form input[type="submit"]:hover{
+    background-color: rgb(165, 33, 10);
+}
+form :disabled{
+    background: violet;
+}
+
+.project{
+    font-size: 40px;
+}

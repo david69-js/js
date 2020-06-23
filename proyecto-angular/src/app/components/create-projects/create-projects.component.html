@@ -1,0 +1,59 @@
+<div id="container">
+   <h1>{{title}}</h1>
+
+<div class="project success">
+      El proyecto se ha guardo con exito ver <a href="#">aqui</a>
+ </div>
+
+<div id="project failed">
+      Al parecer ha ocurrido un error
+</div>
+
+   <form #formCreate= "ngForm" (ngSubmit)='onSubmit(formCreate)'>
+         <label for="name">Nombre</label>
+         <input type="text" name="name" #Name='ngModel' [(ngModel)]="project.name" required>
+         <span *ngIf="!Name.valid && Name.touched">
+         <strong [ngStyle]="{'color':'red',
+                             'font-size': '30px',
+                             'margin-left':'30px' 
+                           }">This is required camp</strong></span>
+
+         <label for="description">Descripcion</label>
+         <textarea name="description" #Description="ngModel" [(ngModel)]="project.description" required></textarea>
+         <span *ngIf="!Description.valid && Description.touched">
+            <strong [ngStyle]="{'color':'red',
+                                'font-size': '30px',
+                                'margin-left':'30px' 
+                              }">This is required camp</strong></span>
+   
+
+
+         <label for="category">Categoria</label>
+         <input type="text" name="category" #Category='ngModel' [(ngModel)]="project.category" required>
+         <span *ngIf="!Category.valid && Category.touched">
+            <strong [ngStyle]="{'color':'red',
+                                'font-size': '30px',
+                                'margin-left':'30px' 
+                              }">This is required camp</strong></span>
+   
+
+         <label for="langs">Lenguajes</label>
+         <input type="text" name="langs" #Langs='ngModel' [(ngModel)]="project.langs" required>
+         <span *ngIf="!Langs.valid && Langs.touched">
+            <strong [ngStyle]="{'color':'red',
+                                'font-size': '30px',
+                                'margin-left':'30px' 
+                              }">This is required camp</strong></span>
+   
+
+         <label for="year">Anio</label>
+         <input type="number" name="year" #Year='ngModel' [(ngModel)]="project.year">
+        
+   
+
+         <label for="image">Imagen</label>
+         <input type="file" name="image" #Image='ngModel' [(ngModel)]="project.image">
+
+         <input type='submit' value="Enviar" [disabled]="!formCreate.form.valid">
+   </form>
+</div>

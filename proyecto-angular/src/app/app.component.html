@@ -1,1 +1,17 @@
-<h1>{{title}}</h1>
+  <header>
+    <ul>
+          <li><a routerLink="about" routerLinkActive="active">Sobre mi</a></li>
+          <li><a routerLink="projects" routerLinkActive="active">Proyecto</a></li>
+          <li class="logo"><a  href="#" >SD</a></li>
+          <li><a routerLink="create" routerLinkActive="active" >Crear Proyecto</a></li>
+          <li><a routerLink="contact" routerLinkActive="active" >Contacto</a></li>
+    </ul>  
+  </header>
+
+  <section id="content">
+    <router-outlet></router-outlet>
+  </section>
+  
+  <footer>
+    'Master en JavaScript con David Toj'&copy;
+  </footer>
