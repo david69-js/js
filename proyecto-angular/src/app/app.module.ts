@@ -14,6 +14,8 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { CreateProjectsComponent } from './components/create-projects/create-projects.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ErrorComponent } from './components/error/error.component';
+import { DetailComponent } from './components/detail/detail.component';
+
 
 
 
@@ -25,8 +27,7 @@ import { ErrorComponent } from './components/error/error.component';
     CreateProjectsComponent,
     ContactComponent,
     ErrorComponent,
-
- 
+    DetailComponent,
   ],
   imports: [
     BrowserModule,

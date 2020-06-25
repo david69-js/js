@@ -1,12 +1,12 @@
 <div id="container">
    <h1>{{title}}</h1>
 
-<div class="project success">
-      El proyecto se ha guardo con exito ver <a href="#">aqui</a>
+<div class="project success" *ngIf="status == 'success'">
+      El proyecto se ha guardo con exito ver --<a [routerLink]="['/detail', save_project._id]">aqui</a>
  </div>
 
-<div id="project failed">
-      Al parecer ha ocurrido un error
+<div class="project failed" *ngIf="status == 'failed'">
+      El proyecto no se ha podido guardar 
 </div>
 
    <form #formCreate= "ngForm" (ngSubmit)='onSubmit(formCreate)'>
@@ -52,7 +52,7 @@
    
 
          <label for="image">Imagen</label>
-         <input type="file" name="image" #Image='ngModel' [(ngModel)]="project.image">
+         <input type="file" name="image" #Image='ngModel' [(ngModel)]="project.image" (change)="fileChangeEvent($event)" >
 
          <input type='submit' value="Enviar" [disabled]="!formCreate.form.valid">
    </form>

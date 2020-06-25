@@ -1,5 +1,5 @@
 // Importamos los componentes de angular 
-import { ModuleWithProviders, Component } from '@angular/core';
+import { ModuleWithProviders} from '@angular/core';
 import { Routes, RouterModule,  } from "@angular/router";
 
 
@@ -10,6 +10,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { CreateProjectsComponent } from './components/create-projects/create-projects.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ErrorComponent } from './components/error/error.component';
+import { DetailComponent } from './components/detail/detail.component';
 
 
 
@@ -20,6 +21,7 @@ const appRoutes: Routes= [
     {path:'projects', component:ProjectsComponent},
     {path:'create', component:CreateProjectsComponent},
     {path:'contact', component:ContactComponent},
+    {path: 'detail/:id', component: DetailComponent},
     {path:"**", component:ErrorComponent}
 ]
 //Creamos nuestros modulos a exportar 
