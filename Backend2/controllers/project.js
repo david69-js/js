@@ -40,7 +40,8 @@ var controller = {
 
     getProject: (req, res) =>{
         var projectId = req.params.id;
-        if(!projectId) return res.status(404).send({message: "No se ha encontrado el documento"})
+        
+        if(projectId == null) return res.status(404).send({message: "No se ha encontrado el documento"})
         //Es la validacion para hacer opcional el parametro
 
         Project.findById(projectId, (err, project) =>{
@@ -75,7 +76,8 @@ var controller = {
 
             if(!projectUpdate) return res.status(404).send({message: "No se ha encontrado el docuemnto"});
 
-            return res.status(200).send({projectUpdate})
+            return res.status(200).send({
+                project: projectUpdate})
         });
     },
 
@@ -87,7 +89,8 @@ var controller = {
 
             if(!projectDelete) return res.status(404).send({message: "No se ha encontrado el documento para el eliminar"});
 
-            return res.status(200).send({projectDelete});
+            return res.status(200).send({
+                project: projectDelete});
         });  
     },
 
@@ -110,7 +113,8 @@ var controller = {
 
                 if(!imageUpload) return res.status(404).send({message: "No se encontro el documento"});
 
-                return res.status(200).send({imageUpload})
+                return res.status(200).send({
+                    project: imageUpload})
             });
             }else{
                 fs.unlink(filePath, (err) =>{

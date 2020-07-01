@@ -5,7 +5,7 @@ var app = require('./app');
 var port = 3700
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/portafolio1')
+mongoose.connect('mongodb://localhost:27017/portafolio1', { useUnifiedTopology: true })
         .then(() => {
             console.log("Conexion a la base de datos realizada con exito");
 
