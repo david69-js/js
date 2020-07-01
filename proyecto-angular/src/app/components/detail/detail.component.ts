@@ -15,6 +15,8 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 export class DetailComponent implements OnInit {
     public project:Project;
     public url: string;
+    public confirm: boolean;
+    public delete: string;
 
   constructor(
     private _projectService: ProjectService,
@@ -23,6 +25,8 @@ export class DetailComponent implements OnInit {
   ) { 
 
     this.url = Global.url;
+    this.confirm =  false;
+    this.delete= "¿Estas seguro de querer eliminar este proyecto?"
   }
 
   ngOnInit(): void {
@@ -32,6 +36,10 @@ export class DetailComponent implements OnInit {
           this.getProject(id);
       });
   }
+
+  alert(confirm){
+    this.confirm = confirm;
+  }
   getProject(id){
     
     this._projectService.getProject(id).subscribe(
@@ -39,6 +47,20 @@ export class DetailComponent implements OnInit {
         this.project = response.project;
       }, err =>{
           console.log(<any>err)
-      });
+      }
+      );
+  }
+
+  deleteProject(id){
+    this._projectService.deleteProject(id).subscribe(
+      response =>{
+          if(response.project){
+              this._router.navigate(['/projects'])
+          }
+      },
+      error =>{
+        console.log(<any>error)
+      }
+    )
   }
 }

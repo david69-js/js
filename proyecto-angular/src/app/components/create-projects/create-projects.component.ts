@@ -14,7 +14,7 @@ export class CreateProjectsComponent implements OnInit {
   public title: string;
   public project: Project;
   public status: string;
-  public imageToUpload: Array<File>;
+  public filesToUpload: Array<File>;
   public url: string;
   public save_project;
   
@@ -41,14 +41,22 @@ export class CreateProjectsComponent implements OnInit {
           if(response.project){
         
         //Subir la imagen
-        this._serviceUpload.uploadService(this.url+"upload-image/"+response.project._id, [],this.imageToUpload, 'image' )
+        if(this.filesToUpload){
+        this._serviceUpload.uploadService(this.url+"upload-image/"+response.project._id, [],this.filesToUpload, 'image' )
             .then((result:any)=>{
-              this.save_project = result;
-              console.log(result);
+            
+              this.save_project = result.project;
+            
               this.status = 'success';
               form.reset();
-        })
+        });
         
+      }else{
+        this.save_project = response.project;
+        this.status = 'success';
+        form.reset();
+
+         }
           }else{
             this.status = 'failed';
           }
@@ -58,8 +66,8 @@ export class CreateProjectsComponent implements OnInit {
       });
     }
 
-  fileChangeEvent(fileInput: any){
-        this.imageToUpload = <Array<File>>fileInput.target.files;
-  }
+    fileChangeEvent(fileInput: any){
+      this.filesToUpload = <Array<File>>fileInput.target.files;
+    }
 
 }

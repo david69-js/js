@@ -139,7 +139,12 @@ article hr{
     margin-bottom: 5%;
 }
 /*Estilos del Formualrio*/
-h1{
+#container{
+    padding-left: 4%;
+    display: grid;
+    margin-left: 20px;
+}
+#container h1{ 
     text-align: center;
     font-size: 40px;
     border-bottom: 2px solid seagreen;
@@ -149,10 +154,6 @@ h1{
     margin-bottom: 10%;
     padding-bottom: 30px;
     padding-top: 30px;
-}
-#container{
-    padding-left: 11%;
-    display: grid;
 }
 form label{
     display: block;
@@ -224,4 +225,57 @@ form :disabled{
 .project a{
     text-decoration: none;
     color: black;
+}
+
+/*Detalles*/
+.container{
+    padding-left: 11%;
+    display: block;
+    width: 60%;
+}
+.container .image{
+    float: left;
+    margin-right: 40px;
+    margin-left: -50px;
+}
+.container .data{
+    margin-top: 5%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14px;
+    display: block;
+    height: 70%;
+    padding-left: 77%;
+    width: 58%;
+}
+.botton-edit,
+.botton-delete{
+    display: block;
+    padding: 0%;
+    margin-left: 72%;
+    margin-right: -2%;
+    margin: 30px;
+    float: unset;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    background: brown;
+    border-color: rgb(117, 43, 43)
+}
+.botton-edit{
+    border:2px solid black;
+    background: blueviolet;
+}
+.botton-delete{
+    border:2px solid black;
+    background: rgb(160, 34, 34);
+    cursor: pointer;
+}
+
+/* Slider*/
+.bx-wrapper img {
+    max-width: 89%;
+    display: block;
+    margin-left: 9%;
+    margin-right: 12%;
+    margin-top: 3%;
 }

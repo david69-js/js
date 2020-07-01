@@ -1,4 +1,4 @@
-<div id="container">
+<div id="container"  *ngIf="project">
    <h1>{{title}}</h1>
 
 <div class="project success" *ngIf="status == 'success'">
@@ -52,7 +52,12 @@
    
 
          <label for="image">Imagen</label>
-         <input type="file" name="image" #Image='ngModel' [(ngModel)]="project.image" (change)="fileChangeEvent($event)" >
+         <div class="image" *ngIf="project.image">
+            <img src="{{url+'get-image/'+project.image}}" height="200px" *ngIf="project.image">
+        </div>
+         <input type="file" name="image" (change)="fileChangeEvent($event)" >
+
+
 
          <input type='submit' value="Enviar" [disabled]="!formCreate.form.valid">
    </form>
